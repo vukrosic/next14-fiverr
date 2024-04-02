@@ -19,6 +19,7 @@ import type * as conversations from "../conversations.js";
 import type * as gig from "../gig.js";
 import type * as gigMedia from "../gigMedia.js";
 import type * as gigs from "../gigs.js";
+import type * as messages from "../messages.js";
 import type * as offers from "../offers.js";
 import type * as reviews from "../reviews.js";
 import type * as seedCategories from "../seedCategories.js";
@@ -41,6 +42,7 @@ declare const fullApi: ApiFromModules<{
   gig: typeof gig;
   gigMedia: typeof gigMedia;
   gigs: typeof gigs;
+  messages: typeof messages;
   offers: typeof offers;
   reviews: typeof reviews;
   seedCategories: typeof seedCategories;
