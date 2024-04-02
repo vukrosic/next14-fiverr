@@ -42,3 +42,12 @@ export const remove = mutation({
         await ctx.storage.delete(args.storageId);
     },
 });
+
+
+export const getMediaUrl = query({
+    args: { storageId: v.optional(v.id("_storage")) },
+    handler: async (ctx, args) => {
+        if (!args.storageId) return null;
+        return await ctx.storage.getUrl(args.storageId);
+    },
+});
