@@ -10,8 +10,8 @@ import { Images } from "../../../components/images";
 import { Description } from "@/components/description";
 import { Info } from "lucide-react";
 import { SellerDetails } from "./_components/seller-details";
-// import { Reviews } from "../_components/reviews/reviews";
-// import { AddReview } from "../_components/reviews/add-reivew";
+import { Reviews } from "../_components/reviews/reviews";
+import { AddReview } from "../_components/reviews/add-review";
 
 
 interface PageProps {
@@ -88,10 +88,11 @@ const GigPage = ({
                     <Reviews
                         reviews={reviewsFull}
                     />
+                     */}
                     <AddReview
                         gigId={gig._id}
                         sellerId={gig.seller._id}
-                    /> */}
+                    />
                 </div>
                 <Offers
                     offers={offers}

@@ -14,7 +14,7 @@ export const Seller = ({
 }: SellerProps) => {
     const averageReview = reviews.reduce((acc, review) => {
         return acc + review.communication_level + review.recommend_to_a_friend + review.service_as_described;
-    }, 0) / reviews.length;
+    }, 0) / (reviews.length * 3);
 
     return (
         <div className="flex space-x-4">
@@ -35,7 +35,7 @@ export const Seller = ({
                     <div className="flex gap-x-1">
                         <Star className="w-5 h-5" />
                         <p className="font-semibold">{reviews.length}</p>
-                        (<p className="underline">{averageReview || 0}</p>)
+                        (<p className="underline">{averageReview.toFixed(2) || 0}</p>)
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@ export const SellerDetails = ({
     const router = useRouter();
     const averageReview = reviews.reduce((acc, review) => {
         return acc + review.communication_level + review.recommend_to_a_friend + review.service_as_described;
-    }, 0) / reviews.length;
+    }, 0) / (reviews.length * 3);
 
     const joinedDate = format(new Date(seller._creationTime), 'MMM yy');
 
@@ -59,7 +59,7 @@ export const SellerDetails = ({
                         <div className="flex space-x-1.5">
                             <Star className="w-5 h-5" />
                             <p className="font-semibold">{reviews.length}</p>
-                            <div className="flex">(<p className="underline">{averageReview || 0}</p>)</div>
+                            <div className="flex">(<p className="underline">{averageReview.toFixed(2) || 0}</p>)</div>
                         </div>
                         <div className="bg-yellow-100 text-red-900 font-semibold p-1">{seller.customTag}</div>
                     </div>
