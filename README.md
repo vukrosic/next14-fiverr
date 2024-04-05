@@ -1,3 +1,54 @@
+This is code for the following tutorial:
+
+![Fiverr Clone](https://github.com/vukrosic/next14-fiverr/blob/main/public/thumbnail.png?raw=true)
+
+[VIDEO TUTORIAL](https://youtu.be/UK5SI3lU3X8)
+
+
+If you want to run this I recommend following the tutorial. You can also try the following:
+
+## Required:
+Node version 14.x
+
+## Clone this repo
+```bash
+git clone https://github.com/vukrosic/next14-fiverr
+```
+
+## Install packages
+```bash
+cd next14-fiverr & npm install
+```
+
+## Run Convex
+```bash
+npx convex dev
+```
+
+You will need to setup Clerk, Convex and other things. Don't forget to add your variables to convex website as well. Here is example .env.local file:
+
+```env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+NEXT_PUBLIC_HOSTING_URL=
+
+NEXT_STRIPE_PUBLISHABLE_KEY=
+NEXT_STRIPE_SECRET_KEY=
+```
+
+## Run the app
+```bash
+npm run dev
+```
+
+At this point, you application should work, but it probably doesn't. You may check timesteps in the video description or try to read and solve errors by yourself. You can also ask in comments.
+
+
+
+
+# Next JS documentation below
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
