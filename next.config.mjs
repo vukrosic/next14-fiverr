@@ -1,7 +1,33 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['media.istockphoto.com', 't3.ftcdn.net', 'necessary-ladybug-115.convex.cloud', 'upload.wikimedia.org', 'images.unsplash.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'media.istockphoto.com',
+                pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 't3.ftcdn.net',
+                pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'necessary-ladybug-115.convex.cloud',
+                pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'upload.wikimedia.org',
+                pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+                pathname: '**',
+            },
+        ],
     },
 };
 
